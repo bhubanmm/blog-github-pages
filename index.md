@@ -5,25 +5,24 @@ description: "Comparative studies, adoption playbooks, and enterprise architectu
 permalink: /
 ---
 
-<!-- Hero / Header -->
-<div style="text-align:center; padding: 2.5rem 1rem;">
-  <img src="/assets/images/header-starwars-antigravity-vs-copilot.png" alt="Antigravity vs Copilot" style="max-width: 980px; width: 100%; border-radius: 8px;">
-ploring Google Antigravity, GitHub Copilot, and the agentic future of development—
-    with practical guidance for enterprise architects and engineering leaders.
-  </p>
-</div>
+# Agentic Coding Dispatch
+
+Exploring Google Antigravity, GitHub Copilot, and the agentic future of development—with practical guidance for enterprise architects and engineering leaders.
 
 ---
 
 ## Featured Article
 
-- **Google Antigravity vs GitHub Copilot: A New Hope for Developers**  
-  Comparative study, enterprise recommendation matrix, and implementation roadmap.  
-  <a href="/blog/antigravity-vs-cop now →</a>
+**Google Antigravity vs GitHub Copilot: A New Hope for Developers**  
+Comparative study, enterprise recommendation matrix, and implementation roadmap.
 
-> If your post lives in `_posts/` (e.g., `2025-11-26-antigravity-vs-copilot.md`), Jekyll will generate it under your blog prefix.  
-> You can set a custom permalink inside the post’s front matter, e.g.:
-> `permalink: /blog/antigravity-vs-copilot/`
+{{ "/blog/antigravity-vs-copilot/" | relative_url }}
+
+> If your post lives in `_posts/` (e.g., `2025-11-26-antigravity-vs-copilot.md`), set a permalink in the post’s front matter:
+>
+> ```yaml
+> permalink: /blog/antigravity-vs-copilot/
+> ```
 
 ---
 
@@ -31,15 +30,19 @@ ploring Google Antigravity, GitHub Copilot, and the agentic future of developmen
 
 <ul>
   {% for post in site.posts limit:6 %}
-    <li style="margin-bottom:0.75rem;">
-      <a href="{{ post.url | relative_urlt.title }}</a>
-      <span style="color:#888;"> — {{ post.date | date: "%b %d, %Y" }}</span><br>
-      <span style="color:#666; font-size:0.95rem;">{{ post.description | default: post.excerpt | strip_html | truncate: 160 }}</span>
-    </li>
+  <li style="margin-bottom:0.75rem;">
+    {{ post.url | relative_url }}{{ post.title }}</a>
+    <span style="color:#888;"> — {{ post.date | date: "%b %d, %Y" }}</span><br>
+    <span style="color:#666; font-size:0.95rem;">
+      {{ post.description | default: post.excerpt | strip_html | truncate: 160 }}
+    </span>
+  </li>
   {% endfor %}
 </ul>
 
-<p>/blog/View all posts →</a></p>
+<p>
+  {{ View all posts →</a>
+</p>
 
 ---
 
@@ -48,14 +51,18 @@ ploring Google Antigravity, GitHub Copilot, and the agentic future of developmen
 <div style="display:flex; flex-wrap:wrap; gap:0.6rem;">
 {% assign tags_list = site.tags | sort %}
 {% for tag in tags_list %}
-  <a href="/tag/{{ tag[0] | slugify }}/" style="font-size:0.95rem; background:#f4f4f4;%}
+  {{ 
+    #{{ tag[0] }} ({{ tag[1].size }})
+  </a>
+{% endfor %}
 </div>
 
 ---
 
 ## Subscribe
 
-- **RSS:** <a href="{{ "/feed.xml"LinkedIn:** Follow Bhuban Mishra for new articles and visuals.
+- **RSS:** {{ Subscribe to feed</a>  
+- **LinkedIn:** Follow **Bhuban Mishra** for new articles and visuals.
 
 ---
 
@@ -64,8 +71,3 @@ ploring Google Antigravity, GitHub Copilot, and the agentic future of developmen
 I’m **Bhuban Mishra**, Enterprise Architect. I write about agentic development, AI governance, and the shift to autonomous workflows—translating cutting-edge tools into actionable enterprise strategies.
 
 ---
-
-<!-- Footer banner -->
-<div style="text-align:center; padding: 2rem 0;">
-  <img src="/assets/images/footer-may-the-code-be-with-youtle.png
-</div>
