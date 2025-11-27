@@ -16,7 +16,11 @@ Exploring Google Antigravity, GitHub Copilot, and the agentic future of developm
 **Google Antigravity vs GitHub Copilot: A New Hope for Developers**  
 Comparative study, enterprise recommendation matrix, and implementation roadmap.
 
-[Read the article]({{ "/blog/antigravity-vs-copilot/" | relative_url Posts
+{{ "/blog/antigravity-vs-copilot/" | relative_url }}
+
+---
+
+## Latest Posts
 
 {% for post in site.posts limit:6 %}
 - {{ post.url | relative_url }}  
